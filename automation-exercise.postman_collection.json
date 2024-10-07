@@ -371,6 +371,8 @@
 						"exec": [
 							"const response = pm.response.json() ",
 							"const products = response.products;",
+							"const keyword = pm.variables.get(\"keyword\");",
+							"",
 							"",
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -445,12 +447,12 @@
 							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
 							"});",
 							"",
-							"pm.test(\"Each product contains 'top' in name, category, or brand\", function () {",
+							"pm.test(\"Each product contains 'keyword' in name, category, or brand\", function () {",
 							"    products.forEach(function (product) {",
-							"        const nameContainsTop = product.name.toLowerCase().includes(\"top\");",
-							"        const categoryContainsTop = product.category.category.toLowerCase().includes(\"top\");",
-							"        const brandContainsTop = product.brand.toLowerCase().includes(\"top\");",
-							"        pm.expect(nameContainsTop || categoryContainsTop || brandContainsTop).to.be.true;",
+							"        const nameContainsKeyword = product.name.toLowerCase().includes(keyword.toLowerCase());",
+							"        const categoryContainsKeyword = product.category.category.toLowerCase().includes(keyword.toLowerCase());",
+							"        const brandContainsKeyword = product.brand.toLowerCase().includes(keyword.toLowerCase());",
+							"        pm.expect(nameContainsKeyword || categoryContainsKeyword || brandContainsKeyword).to.be.true;",
 							"    });",
 							"});",
 							"",
@@ -475,7 +477,7 @@
 					"formdata": [
 						{
 							"key": "search_product",
-							"value": "top",
+							"value": "{{keyword}}",
 							"type": "text"
 						}
 					]
@@ -1651,6 +1653,10 @@
 		{
 			"key": "unique_mobile",
 			"value": "+1234567890"
+		},
+		{
+			"key": "keyword",
+			"value": "top"
 		}
 	]
 }
