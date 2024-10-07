@@ -61,5 +61,13 @@ The CI process is defined in the `.github/workflows/main.yml` file.
 ### How to View Test Results
 Test results can be viewed in the "Actions" tab of your GitHub repository. Each workflow run will show the logs of the test execution, including any failures or errors encountered during the test runs.
 
+### RunReports and Artifacts
 
+After each workflow run, an HTML report is generated and saved as an artifact called RunReports, which includes a detailed summary of the tests, such as pass/fail results, response times, and error logs.
 
+To access the RunReports:
+
+1. Navigate to the Actions tab in your GitHub repository.
+2. Click on the most recent workflow run.
+3. In the workflow summary, look for the Artifacts section and download the RunReports.zip file.
+4. Unzip the file to access the detailed HTML test report inside the testResults folder.
