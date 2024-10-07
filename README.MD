@@ -39,7 +39,7 @@ Before you begin, ensure you have the following installed on your machine:
 
 ## <span><img src="./assets/rocket.png" alt=Prerequisites style="height: 1cm;"></span> Run tests
 
-Test scenarios are available in `automation-exercise.postman_collection.json`, and you can run them using Postman or Newman
+Test scenarios are available in `automation-exercise.postman_collection.json`, and you can run them using Postman or Newman.
 
 ### Running Tests with Postman
 
