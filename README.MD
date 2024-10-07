@@ -2,7 +2,7 @@
 
 ## Welcome!
 
-This project focuses on testing different functionalities of the <a href="https://www.automationexercise.com/">Automation Exercise Website</a> through comprehensive API testing using Postman. Additionally, the project includes continuous integration (CI) with GitHub Actions.
+This project focuses on testing different functionalities of the <a href="https://www.automationexercise.com/">Automation Exercise Website</a> through automated API tests using Postman. Additionally, the project includes continuous integration (CI) with GitHub Actions.
 
 
 14 scenarios were tested from the Automation Exercise <a href="https://www.automationexercise.com/api_list">website</a> and implementent in this project.
@@ -29,7 +29,7 @@ Before you begin, ensure you have the following installed on your machine:
 
 - Node.js.
 - npm (Node Package Manager): *Comes with Node.js installation.*
-- Postman for testing API requests.
+- Postman.
 
 ## <span><img src="./assets/setting.png" alt=Prerequisites style="height: 1cm;"></span> Set up 
 
@@ -39,9 +39,9 @@ Before you begin, ensure you have the following installed on your machine:
 
 ## <span><img src="./assets/rocket.png" alt=Prerequisites style="height: 1cm;"></span> Testing
 
-Test scenarios are available in `automation-exercise.postman_collection.json`, and you can run them using Postman.
+Test scenarios are available in `automation-exercise.postman_collection.json`, and you can run them using Postman or Newman
 
-### Importing Postman Collection
+### Running Tests with Postman
 
 - From this repository download `automation-exercise.postman_collection.json` file to your local machine.
 - In Postman, click on the "Import" button located at the top left and drop `automation-exercise.postman_collection.json` file.
@@ -49,7 +49,7 @@ Test scenarios are available in `automation-exercise.postman_collection.json`, a
 
 ### Running Tests with Newman
 
-- Open terminal window and and execute the test script -> `npm run test`
+- Open terminal window and and execute the test script: `npm run test`.
 
 ## <span><img src="./assets/github.png" alt=Prerequisites style="height: 1cm;"></span> CI Integration with GitHub Actions
 
